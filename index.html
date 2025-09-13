@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vinzone - Discover Amazing Anime</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Remix Icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sakura animation layer -->
+  <div class="sakura-container" aria-hidden="true">
+    <span class="petal">🌸</span>
+    <span class="petal">🌸</span>
+    <span class="petal">🌸</span>
+    <span class="petal">🌸</span>
+  </div>
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="nav-container">
+      <div class="logo" aria-label="Vinzone logo">
+        <div class="logo-icon">
+          <img src="assets/logo.png" alt="Vinzone Logo" onerror="this.style.display='none'">
+        </div>
+        <div class="logo-text">Vinzone</div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-menu" role="menubar">
+          <li role="none"><a role="menuitem" href="#home"><i class="ri-home-5-fill"></i> Home</a></li>
+          <li role="none"><a role="menuitem" href="#popular"><i class="ri-fire-fill"></i> Popular</a></li>
+          <li role="none"><a role="menuitem" href="#trending"><i class="ri-line-chart-fill"></i> Trending</a></li>
+          <li role="none"><a role="menuitem" href="#genres"><i class="ri-theater-fill"></i> Genres</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero / Search -->
+  <section class="hero" id="home" role="region" aria-label="Discover anime">
+    <h1><i class="ri-sparkling-fill"></i> Discover Amazing Anime</h1>
+    <p>Explore trending 2024–2025 titles with full synopses, ratings, and genre filters.</p>
+
+    <div class="search-controls" style="max-width:820px;margin:1.25rem auto 0;">
+      <div class="search-container" style="display:flex;gap:.5rem;align-items:center;">
+        <input id="searchInput" class="search-bar" type="search" placeholder="Search by title or genre..." aria-label="Search anime">
+        <select id="genreFilter" class="genre-filter" aria-label="Filter by genre">
+          <option value="">All genres</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <main class="main-content" id="popular" role="main">
+    <div class="content-area">
+      <section class="section" aria-labelledby="popular-heading">
+        <h2 id="popular-heading"><i class="ri-fire-fill"></i> Popular & Trending</h2>
+        <div id="popularAnime" class="anime-grid" aria-live="polite"></div>
+      </section>
+    </div>
+
+    <aside class="sidebar" aria-label="Sidebar">
+      <section class="section" id="trending" aria-labelledby="trending-heading">
+        <h2 id="trending-heading"><i class="ri-line-chart-fill"></i> Trending Now</h2>
+        <ul id="trendingList" class="trending-list"></ul>
+      </section>
+
+      <section class="section" id="genres" aria-labelledby="genres-heading">
+        <h2 id="genres-heading"><i class="ri-theater-fill"></i> Genres</h2>
+        <div id="genreTags" class="genre-tags"></div>
+      </section>
+    </aside>
+  </main>
+
+  <!-- script -->
+  <script src="script.js" defer></script>
+</body>
+</html>
